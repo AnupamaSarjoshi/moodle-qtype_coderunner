@@ -44,6 +44,10 @@ class qtype_coderunner_testing_outcome {
     public $testresults;             // An array of TestResult objects.
     public $sourcecodelist;          // Array of all test runs.
     public $sandboxinfo;             // An associative array of sandbox info, e.g. Jobe server name.
+    public $numerrors;               // The number of failed tests.
+    public $numtestsexpected;        // Number of test results expected.
+    public $graderstate;             // For use by combinator template graders, allowing to customise grade and feedback.
+    public \html_table $failures;    // Table for reporting validation errors.
 
     public function __construct($maxpossmark, $numtestsexpected, $isprecheck) {
         $this->status = self::STATUS_VALID;

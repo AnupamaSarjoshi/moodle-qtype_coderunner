@@ -35,7 +35,10 @@ class qtype_coderunner_jobrunner {
     private $question = null;        // The question that we're running code for.
     private $testcases = null;       // The testcases (a subset of those in the question).
     private $allruns = null;         // Array of the source code for all runs.
-
+    private $sandboxparams = null;   // Array of sandbox params.
+    private $language = null;        // Language used to run the code.
+    private $templateparams = null;  // Template params.
+    private $isprecheck = false;     // True if this grading is occurring because the student clicked the precheck button.
     // Check the correctness of a student's code and possible extra attachments
     // as an answer to the given
     // question and and a given set of test cases (which may be empty or a

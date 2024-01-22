@@ -26,6 +26,27 @@ use qtype_coderunner\constants;
 
 class qtype_coderunner_combinator_grader_outcome extends qtype_coderunner_testing_outcome {
 
+    /** Html that is displayed before the result table. */
+    public $epiloguehtml;
+
+    /** Html that is displayed after the result table. */
+    public $prologuehtml;
+
+    /** @var null  */
+    public $columnformats;
+
+    /** If true, the question does not display the result table and no grading. */
+    public $outputonly;
+
+    /** HTML feedback set for teacher that is hidden from student. */
+    public $instructorhtml;
+
+    /** @var ?number A fraction. */
+    public $fraction;
+
+    /** If true, is used when the question is to be used only to display the output and perhaps images from a run, with no mark. */
+    public $showoutputonly;
+
     // A list of the allowed attributes in the combinator template grader return value.
     public $allowedfields = ['fraction', 'prologuehtml', 'testresults', 'epiloguehtml',
                     'feedbackhtml', 'columnformats', 'showdifferences',
